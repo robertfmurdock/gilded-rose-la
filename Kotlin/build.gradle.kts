@@ -12,8 +12,14 @@ repositories {
 }
 
 dependencies {
+	implementation(platform("com.zegreatrob.testmints:testmints-bom:10.2.16"))
 	implementation(kotlin("stdlib"))
 	testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+
+	testImplementation(kotlin("test"))
+	testImplementation("com.zegreatrob.testmints:standard")
+	testImplementation("com.zegreatrob.testmints:async")
+	testImplementation("com.zegreatrob.testmints:minassert")
 }
 
 tasks.test {
